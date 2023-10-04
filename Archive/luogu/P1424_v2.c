@@ -4,17 +4,15 @@
 
 int main()
 {
-    long long n, s = 0;
-    int x;
-    scanf("%d %lld",&x,&n);
-    for (int i = 0; i < n; i++)
-    {
+    int x,n,sum = 0;
+    scanf("%d %d",&x,&n);
+    for (int i =0;i<n;i++)
+    { 
+        if (x!=6&&x!=7)
+            sum += 250;
         if (x == 7)
             x = 1;
-        if (x != 6 && x != 7)
-            s += 250;
-        x++;
     }
-    printf("%lld",s);
+    printf("%d",sum);
     return 0;
 }
