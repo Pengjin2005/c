@@ -16,10 +16,12 @@ int main()
     char order[3];
     scanf("%s",order);
     int i,j;
-    for ( i=0;i<3;i++)
+    for ( i=0;i<2;i++)
     {
         j = order[i]-'A';
         printf("%d ",sortedOrder[j]);
     }
+    j = order[2]-'A';
+    printf("%d",sortedOrder[j]);
     return 0;
 }

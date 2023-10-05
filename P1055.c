@@ -24,12 +24,8 @@ int main()
     else
     {
         if (sum == 10)
-        {
             sum = 'X';
-            isbn[12] = sum;
-        }
-        else
-            isbn[12] = sum + '0' ;
+        isbn[12] = sum + '0' ;
         printf("%s",isbn);
     }
     return 0;
