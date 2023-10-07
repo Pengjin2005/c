@@ -3,25 +3,45 @@
 int main()
 {
     int a,b,c;
-    int sortedOrder[3];
+    int sorted[3];
+
+
     scanf("%d %d %d",&a,&b,&c);
-    sortedOrder[2] = a>b ? (a>c?a:c): (b>c?b:c);
-    sortedOrder[0] = a<b ? (a<c?a:c): (b<c?b:c);
-    if (sortedOrder[2]==a)
-        sortedOrder[1] = b>c ? b:c;
-    else if (sortedOrder[2]== b)
-        sortedOrder[1] = a>c?a:c;
-    else
-        sortedOrder[1]=a>b?a:b;
+
+    sorted[0] = a;
+    sorted[1] = b;
+    sorted[2] = c;
+
+    int axis = sorted[0], temp;
+    for (int j =0; j<2;j++){
+        for (int i = 0; i < 2; i++)
+    {
+        if (sorted[i] > sorted[i+1])
+        {
+            temp = sorted[i];
+            sorted[i] = sorted[i+1];
+            sorted[i+1] = temp;
+        }
+    }
+    }
     char order[3];
     scanf("%s",order);
-    int i,j;
-    for ( i=0;i<2;i++)
-    {
-        j = order[i]-'A';
-        printf("%d ",sortedOrder[j]);
-    }
-    j = order[2]-'A';
-    printf("%d",sortedOrder[j]);
-    return 0;
+    for (int i = 0; order[i] != 0; i++)
+	{
+		switch (order[i])
+		{
+		case 'A':
+			printf("%d ", sorted[0]);
+			break;
+		case 'B':
+			printf("%d ", sorted[1]);
+			break;
+		case 'C':
+			printf("%d ", sorted[2]);
+			break;
+		}
+	}
+	printf("\n");
+
+	return 0;
 }
