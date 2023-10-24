@@ -16,7 +16,7 @@ int main()
                 path[k] = 'R';
                 k++;
             }
-            else if (x + 1 == xc)
+            else if (x + 1 == xc && )
             {
                 if (y <= yc )
                 {
@@ -77,7 +77,7 @@ int main()
                 path[k] = 'U';
                 k++;
             }
-            else if (y + 1 == yc)
+            else if (y + 1 == yc && x==xc)
             {
                 if (x <= xc )
                 {
